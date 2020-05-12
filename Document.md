@@ -296,13 +296,11 @@ Hobby:<br>
 ### Forms with Bootstrap 4
 
 ### Bootstrap Form Layouts
- * Bootstrap provides three types of form layouts:
-  * Vertical form (this is default)
-  * Horizontal form
-  * Inline form
-  * Standard rules for all three form layouts:
-  * Wrap labels and form controls in <div class="form-group"> (needed for optimum spacing)
-  * Add class .form-control to all textual <input>, <textarea>, and <select> elements
-
-### Bootstrap Vertical Form (default)
+ - Bootstrap provides three types of form layouts:
+  - Vertical form (this is default)
+  - Horizontal form
+  - Inline form
+ 
+----
+***Bootstrap Vertical Form (default)***
  * The following example creates a vertical form with two input fields, one checkbox, and a submit button:
