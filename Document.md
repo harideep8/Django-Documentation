@@ -112,8 +112,8 @@ def register(request):
       Name:<input type="text" name="Name"><br>
       Mobile Number:<input type="text" name="Mobile"><br>
       Mail Id:<input type="text" name="Mail"><br>
-      Age :<input type="text" name="age">
-      Branch:<input type="text" name="branch">
+      Age :<input type="text" name="age"><br>
+      Branch:<input type="text" name="branch"><br>
       <input type="submit" name="submit" value="Submit">
     </form>
   </body>
