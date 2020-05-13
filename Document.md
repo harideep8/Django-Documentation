@@ -64,7 +64,7 @@ def show(request):
 
 **display.html**
 ----
-
+- Inside the template tag we are calling data(key) which is coming from the function show in views.py
 ```html
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
@@ -110,7 +110,7 @@ urlpatterns = [
 
 **Views.py**
 ----
-
+- We are collecting data with request.POST after passing collected data to result.html
 ```python
 from django.shortcuts import render
 
@@ -154,7 +154,7 @@ def register(request):
 
 **result.html**
 ----
-
+- Inside the template tag calling keys to display the data which came from register function in views.py
 ```html
 
 <!DOCTYPE html>
