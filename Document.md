@@ -35,20 +35,51 @@ Let us create a simple template that shows the current date and time as discusse
 
 For this project i created one application i.e, testapp is my application name and i created one function show inside the views.py, to display output i created one templated called display.html
 
+**urls.py**
+----
+
+```
+from django.urls import path
+from testapp import views
+
+urlpatterns = [
+    path('test/', views.show),
+]
+```
+
 **Views.py**
 ----
-<img src="d2.JPG"/>
+- Import datetime module is a mandatory to display the current server time
+-  We are passing dictionary to display.html, data as a key and date as a value
+```python
+from django.shortcuts import render
+import datetime
+
+
+def show(request):
+    date=datetime.datetime.now()
+    return render(request,'testapp/display.html',{'data':date})
+```
 
 
 **display.html**
 ----
 
-<img src="d3.JPG"/>
+```html
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h2>The server date and time is : {{data}}</h2>
+  </body>
+</html>
 
-**urls.py**
-----
+```
 
-<img src="d4.JPG"/>
+
 
 **Result**
 ----
@@ -73,7 +104,6 @@ For this project i created one application i.e, testapp is my application name a
 from django.urls import path
 from apssdc import views
 urlpatterns = [
-    path('admin/', admin.site.urls),
     path('register/',views.register,name="register")
 ]
 ```
