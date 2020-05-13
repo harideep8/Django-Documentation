@@ -67,25 +67,94 @@ For this project i created one application i.e, testapp is my application name a
 - Here total we consired 3 fields in our application so that we require 3 input fields and one submit button
 - To display the output create another template
 
+**urls.py**
+----
+```
+from django.urls import path
+from apssdc import views
+urlpatterns = [
+    path('admin/', admin.site.urls),
+    path('register/',views.register,name="register")
+]
+```
+
 **Views.py**
 ----
-<img src="d7.JPG"/>
+
+```python
+from django.shortcuts import render
+
+def register(request):
+    if request.method=="POST":
+        name=request.POST['Name']
+        phonenumber=request.POST['Mobile']
+        mailid=request.POST['Mail']
+        age=request.POST['age']
+        branch=request.POST['branch']
+        return render(request,'apssdc/result.html',{'name':name,'phonenumber':phonenumber,'mailid':mailid,'age':age,'branch':branch})
+    return render(request,'apssdc/index.html')
+```
 
 
 **index.html**
 ----
 
-<img src="d6.JPG"/>
+```html
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <form action="{% url 'register' %}" method="post">
+      {%csrf_token%}
+      Name:<input type="text" name="Name"><br>
+      Mobile Number:<input type="text" name="Mobile"><br>
+      Mail Id:<input type="text" name="Mail"><br>
+      Age :<input type="text" name="age">
+      Branch:<input type="text" name="branch">
+      <input type="submit" name="submit" value="Submit">
+    </form>
+  </body>
+</html>
+
+```
+
 
 **result.html**
 ----
 
-<img src="d8.JPG"/>
+```html
 
-**urls.py**
-----
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <table border=2>
+      <tr>
+        <th>Name</th>
+        <th>Mobile Number</th>
+        <th>Mail ID</th>
+        <th>Age</th>
+        <th>Branch</th>
+      </tr>
+      <tr>
+        <td>{{name}}</td>
+        <td>{{phonenumber}}</td>
+        <td>{{mailid}}</td>
+        <td>{{age}}</td>
+        <td>{{branch}}</td>
+      </tr>
+    </table>
+  </body>
+</html>
 
-<img src="d9.JPG"/>
+```
+
 
 **Result**
 ----
