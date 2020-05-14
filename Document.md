@@ -31,6 +31,8 @@ Render takes upto 6 argumnets i.e, Required arugumnets are 2 Optional arguments 
 - Now the function will render to template (html file)
 - Finally the result in the form of html response
 
+
+
 <img src="d1.png"/>
 
 ***Steps to implement render from views to html and html to views***
