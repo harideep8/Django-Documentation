@@ -24,6 +24,15 @@ Render takes upto 6 argumnets i.e, Required arugumnets are 2 Optional arguments 
 
 > How ever we will use upto 3 argumnets maximum(request,template name,context(dictionary)
 
+**Structure of a Render**
+----
+- First HTTP Request(user request) will forward to urls.py
+- From urls.py if request found then the request is carried to view.py i.e it call's the function
+- Now the function will render to template (html file)
+- Finally the result in the form of html response
+
+<img src="d1.png"/>
+
 ***Steps to implement render from views to html and html to views***
 
 - In views.py first we should have to import a render
