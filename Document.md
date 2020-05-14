@@ -2,7 +2,7 @@
 -----
 ### What is a render?
 
-It Combines a given template with a given context dictionary and returns an HttpResponse object with that rendered text.
+Render Combines a given template with a given context dictionary and returns an HttpResponse object with that rendered text.
 
 ### How to import render?
 
