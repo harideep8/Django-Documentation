@@ -20,7 +20,7 @@ Render takes upto 6 argumnets i.e, Required arugumnets are 2 Optional arguments 
   - **context**: A dictionary of values to add to the template context. By default, this is an empty dictionary. If a value in the                        dictionary is callable, the view will call it just before rendering the template.
   - **content_type**: The MIME type to use for the resulting document. Defaults to 'text/html'.
   - **status**: The status code for the response. Defaults to 200.
-  - **using**: The NAME of a template engine to use for loading the template.
+  - **using**: The name of a template engine to use for loading the template.
 
 > How ever we will use upto 3 argumnets maximum(request,template name,context(dictionary)
 
